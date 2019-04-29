@@ -1,7 +1,7 @@
 {
   "name": "boilerplate-nodejs",
-  "version": "0.0.1",
-  "description": "Runtime with babel for nodejs",
+  "version": "1.0.0",
+  "description": "boilerplate-nodejs-description",
   "homepage": "https://github.com/afeiship/boilerplate-nodejs",
   "author": {
     "name": "afei",
