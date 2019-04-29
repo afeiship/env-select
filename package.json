@@ -1,0 +1,24 @@
+{
+  "name": "boilerplate-nodejs",
+  "version": "0.0.1",
+  "description": "Runtime with babel for nodejs",
+  "homepage": "https://github.com/afeiship/boilerplate-nodejs",
+  "author": {
+    "name": "afei",
+    "email": "1290657123@qq.com"
+  },
+  "scripts": {
+    "start": "babel-node src/app.js"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.4",
+    "prettier": "^1.17.0"
+  },
+  "dependencies": {
+    "next-js-core2": "github:afeiship/next-js-core2"
+  }
+}
