@@ -1,4 +1,4 @@
-import nx from 'next-js-core2';
+import nx from '@feizheng/next-js-core2';
 
 class App {
   static start() {
