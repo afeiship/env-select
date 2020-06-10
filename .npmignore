@@ -6,3 +6,8 @@ test
 src
 build
 gulpfile.js
+
+
+# vscode
+.vscode
+.history

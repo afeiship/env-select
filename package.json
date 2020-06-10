@@ -1,5 +1,5 @@
 {
-  "name": "@feizheng/boilerplate-nodejs",
+  "name": "@boilerplate-scope/boilerplate-nodejs",
   "version": "1.0.0",
   "description": "boilerplate-nodejs-description",
   "homepage": "https://github.com/afeiship/boilerplate-nodejs",
@@ -8,17 +8,20 @@
     "email": "1290657123@qq.com"
   },
   "scripts": {
-    "start": "babel-node src/app.js"
+    "app": "babel-node src/app.js"
   },
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/node": "^7.8.4",
-    "@babel/preset-env": "^7.8.4",
-    "prettier": "^1.19.1"
+    "@babel/core": "^7.10.2",
+    "@babel/node": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "prettier": "^2.0.5"
   },
   "dependencies": {
-    "@feizheng/next-js-core2": "^2.4.2"
+    "@feizheng/next-global": "^1.0.2",
+    "@feizheng/next-js-core2": "^2.5.0",
+    "@feizheng/next-require": "^1.1.0",
+    "@feizheng/next-yaml-configuration": "^1.0.2"
   }
 }

@@ -1,10 +1,17 @@
-import nx from '@feizheng/next-js-core2';
+import "./setup";
+
+const { conf } = nx.$global;
 
 class App {
-  static start() {
+  async start() {
     console.log('hello babel-node! 👉', nx.VERSION);
+    console.log(conf.gets());
   }
 }
 
-// main start:
-App.start();
+
+(async () => {
+  const app = new App();
+  await app.start();
+})();
+
