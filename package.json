@@ -8,7 +8,7 @@
     "email": "1290657123@qq.com"
   },
   "scripts": {
-    "app": "babel-node src/app.js"
+    "start": "babel-node src/app.js"
   },
   "main": "index.js",
   "license": "MIT",

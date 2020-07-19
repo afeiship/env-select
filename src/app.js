@@ -1,4 +1,4 @@
-import "./setup";
+import "@/setup";
 
 const { conf } = nx.$global;
 
