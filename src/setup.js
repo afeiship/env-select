@@ -1,16 +1,12 @@
-import '@feizheng/next-js-core2';
-import '@feizheng/next-require';
+import '@jswork/next-js-core2';
+import '@jswork/next-require';
 
 // config
 nx.require({
-  scope: ['dependencies'],
-  pattern: [
-    '@feizheng/next-*',
-    '@afeiship/next-*',
-    '!@feizheng/next-require'
-  ]
+  pattern: ['@jswork/next-*', '@afeiship/next-*', '!@jswork/next-require'],
+  scope: ['dependencies']
 });
+
 nx.global({
   conf: new nx.YamlConfiguration({ path: './config.yml' })
 });
-
