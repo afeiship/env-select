@@ -13,11 +13,11 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "@babel/node": "^7.10.1",
-    "@babel/preset-env": "^7.10.2",
-    "babel-plugin-module-resolver": "^4.0.0",
-    "prettier": "^2.0.5"
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "prettier": "^2.2.1"
   },
   "dependencies": {
     "@jswork/next": "^1.0.4",
