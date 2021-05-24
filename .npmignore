@@ -11,3 +11,6 @@ gulpfile.js
 # vscode
 .vscode
 .history
+.babelrc
+.editorconfig
+.prettierrc
