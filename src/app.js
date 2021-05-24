@@ -1,11 +1,11 @@
 import "@/setup";
 
-const { conf } = nx.$global;
+const { conf, args } = nx.$global;
 
 class App {
   async start() {
     console.log('hello babel-node! 👉', nx.VERSION);
-    console.log(conf.gets());
+    console.log(conf.gets(), args);
   }
 }
 

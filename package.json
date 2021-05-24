@@ -8,7 +8,8 @@
     "email": "1290657123@qq.com"
   },
   "scripts": {
-    "start": "babel-node src/app.js"
+    "start": "babel-node src/app.js",
+    "start-with-args": "babel-node src/app.js --name=nodejsapp"
   },
   "main": "index.js",
   "license": "MIT",
@@ -21,8 +22,11 @@
   },
   "dependencies": {
     "@jswork/next": "^1.0.4",
+    "@jswork/next-fetch": "^1.1.2",
     "@jswork/next-global": "^1.0.0",
     "@jswork/next-require": "^1.0.3",
-    "@jswork/next-yaml-configuration": "^1.0.1"
+    "@jswork/next-yaml-configuration": "^1.0.1",
+    "node-fetch": "^2.6.1",
+    "yargs-parser": "^20.2.7"
   }
 }
