@@ -2,7 +2,7 @@
   "name": "@boilerplate-scope/boilerplate-nodejs",
   "version": "1.0.0",
   "description": "boilerplate-nodejs-description",
-  "homepage": "https://github.com/afeiship/boilerplate-nodejs",
+  "homepage": "https://js.work",
   "author": {
     "name": "afei",
     "email": "1290657123@qq.com"
@@ -28,5 +28,10 @@
     "@jswork/next-yaml-configuration": "^1.0.1",
     "node-fetch": "^2.6.1",
     "yargs-parser": "^20.2.7"
+  },
+  "boilerplate": "@boilerplate-scope/boilerplate-nodejs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/afeiship/@boilerplate-scope/boilerplate-nodejs"
   }
 }
