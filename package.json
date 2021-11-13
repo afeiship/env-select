@@ -29,9 +29,9 @@
     "node-fetch": "^2.6.1",
     "yargs-parser": "^20.2.7"
   },
-  "boilerplate": "@boilerplate-scope/boilerplate-nodejs",
+  "boilerplate": "boilerplate-nodejs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/afeiship/@boilerplate-scope/boilerplate-nodejs"
+    "url": "https://github.com/afeiship/boilerplate-nodejs.git"
   }
 }
