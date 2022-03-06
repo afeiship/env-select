@@ -5,10 +5,10 @@
 
 # Example:
 APP_PATH = File.expand_path("../../", __FILE__)
-LOG_DIR = "#{APP_PATH}/log"
+LOG_DIR = "#{APP_PATH}/logs"
 
 every 1.day do
-  command "cd #{APP_PATH} && npm run start", :output => { standard: "#{LOG_DIR}/cron_app_log.log" }
+  command "cd #{APP_PATH} && npm run start", :output => { standard: "#{LOG_DIR}/cron.log" }
 end
 
 #
