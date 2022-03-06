@@ -18,7 +18,7 @@
     "@babel/node": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "babel-plugin-module-resolver": "^4.1.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.5.1"
   },
   "dependencies": {
     "@jswork/next": "^1.0.4",
