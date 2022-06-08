@@ -7,7 +7,7 @@ export default class AbstractEnvSelect {
    * Auto select env by current url.
    * @returns {string} The target env string.
    */
-  private static select(): string {
+  static select(): string {
     throw new Error('AbstractEnvSelect.select() is not implemented.');
   }
 

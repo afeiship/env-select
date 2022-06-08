@@ -35,7 +35,7 @@ class Env extends AbstractEnvSelect {
    * Auto select env by current url.
    * @returns {Environment} The target env string.
    */
-  private static select(): Environment {
+  static select(): Environment {
     let env: Environment = 'beta';
     nx.forIn(this.ENV_SELECTORS, (key: Environment, value) => {
       if (window.location.pathname.includes(value)) {
