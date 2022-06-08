@@ -21,7 +21,7 @@ module.exports = CraEnvs.set({
 });
 
 
-// your env.ts
+// Your app implementation
 class Env extends AbstractEnvSelect{
   /**
    * Auto select env by current url.
@@ -39,7 +39,7 @@ class Env extends AbstractEnvSelect{
   }
 }
 
-// usage<when beta/staging>
+// Usage <when beta/staging>
 const base_url = Env.get('base_url');
 // https://site-predict-platform.beta.saybot.net
 ```
