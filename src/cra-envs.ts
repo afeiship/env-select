@@ -3,6 +3,7 @@ import nx from '@jswork/next';
 const ENVS_KEY = '__envs__';
 
 export default class CraEnvs {
+  static version = '__VERSION__';
   static get() {
     const penv = process.env;
     const tenv = {};

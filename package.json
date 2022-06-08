@@ -19,6 +19,8 @@
   "boilerplate": "generator-typescript",
   "homepage": "https://js.work",
   "devDependencies": {
+    "@jswork/next-nice-comments": "^1.0.3",
+    "dateformat": "^4.6.3",
     "env-cmd": "^10.1.0",
     "esbuild": "^0.14.38",
     "esbuild-node-externals": "^1.4.1",

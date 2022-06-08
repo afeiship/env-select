@@ -2,6 +2,7 @@ import nx from '@jswork/next';
 import CraEnvs from './cra-envs';
 
 export default class AbstractEnvSelect {
+  static version = '__VERSION__';
   static ENVS = CraEnvs.get();
   /**
    * Auto select env by current url.
