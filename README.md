@@ -10,7 +10,7 @@ npm i @jswork/env-select
 > basic partial files
 ```js
 // .env-cmdrc.js
-const { CraEnvs, AbstractEnvSelect } = require('./src/envs');
+const { CraEnvs } = require('@jswork/env-select');
 
 module.exports = CraEnvs.set({
   beta: {
@@ -23,6 +23,8 @@ module.exports = CraEnvs.set({
 
 
 // Your app implementation
+import { AbstractEnvSelect } from '@jswork/env-select';
+
 class Env extends AbstractEnvSelect{
   /**
    * Auto select env by current url.
