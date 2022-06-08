@@ -8,6 +8,7 @@
   "scripts": {
     "postbuild": "tsc --emitDeclarationOnly",
     "build": "node esbuild.config.js",
+    "test": "env-cmd -e envs jest",
     "test:app": "env-cmd -e envs node __tests__/app.js"
   },
   "license": "MIT",
@@ -23,6 +24,7 @@
     "esbuild-node-externals": "^1.4.1",
     "esbuild-plugin-clean": "^0.9.0",
     "esbuild-plugin-replace": "^1.2.0",
+    "jest": "^28.1.1",
     "prettier": "^2.6.2",
     "release-it": "^15.0.0",
     "typescript": "^4.6.4"
