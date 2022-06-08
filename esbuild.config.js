@@ -4,21 +4,11 @@ const path = require('path');
 const { nodeExternalsPlugin } = require('esbuild-node-externals');
 const { clean } = require('esbuild-plugin-clean');
 const { replace } = require('esbuild-plugin-replace');
-const dateformat = require('dateformat');
 const pkg = require(path.join(process.cwd(), './package.json'));
-const DEFAULT_FORMAT = 'yyyy-mm-dd HH:MM:ss';
+const bfs = require('@jswork/banner-defaults');
 
 // import packages
 require('@jswork/next-nice-comments');
-
-const comments = [
-  `name: ${pkg.name}`,
-  `description: ${pkg.description}`,
-  `homepage: ${pkg.homepage}`,
-  `version: ${pkg.version}`,
-  `date: ` + dateformat(null, DEFAULT_FORMAT),
-  `license: ${pkg.license}`,
-];
 
 const shared = {
   entryPoints: ['src/index.ts'],
@@ -28,7 +18,7 @@ const shared = {
   sourcemap: true,
   target: 'node14',
   banner: {
-    js: nx.niceComments(comments, 'js'),
+    js: nx.niceComments(bfs(pkg), 'js'),
   },
   plugins: [
     clean({
