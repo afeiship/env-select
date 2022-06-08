@@ -7,6 +7,7 @@ npm i @jswork/env-select
 ```
 
 ## usage
+> basic partial files
 ```js
 // .env-cmdrc.js
 const { CraEnvs, AbstractEnvSelect } = require('./src/envs');
