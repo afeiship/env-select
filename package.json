@@ -1,6 +1,6 @@
 {
   "name": "@jswork/env-select",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dynamic detect env by url or other window environment.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -9,6 +9,7 @@
     "postbuild": "tsc --emitDeclarationOnly",
     "build": "node esbuild.config.js",
     "test": "env-cmd -e envs jest",
+    "release": "release-it",
     "test:app": "env-cmd -e envs node __tests__/app.js"
   },
   "license": "MIT",
@@ -33,5 +34,11 @@
   },
   "dependencies": {
     "@jswork/next": "^1.0.9"
-  }
+  },
+  "keywords": [
+    "env",
+    "environment",
+    "select",
+    "selector"
+  ]
 }
