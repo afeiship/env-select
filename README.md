@@ -43,3 +43,12 @@ class Env extends AbstractEnvSelect{
 const base_url = Env.get('base_url');
 // https://site-predict-platform.beta.saybot.net
 ```
+
+> npm package scripts
+```json
+{
+  // ...
+  "start": "env-cmd -e envs react-scripts start",
+  // ...
+}
+```
