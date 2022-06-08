@@ -1,37 +1,33 @@
 {
-  "name": "@boilerplate-scope/boilerplate-nodejs",
+  "name": "@jswork/env-select",
   "version": "1.0.0",
-  "description": "boilerplate-nodejs-description",
-  "homepage": "https://js.work",
-  "author": {
-    "name": "afei",
-    "email": "1290657123@qq.com"
-  },
+  "description": "Dynamic detect env by url or other window environment.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
-    "start": "babel-node src/app.js",
-    "start-with-args": "babel-node src/app.js --name=nodejsapp"
+    "postbuild": "tsc --emitDeclarationOnly",
+    "build": "node esbuild.config.js",
+    "test:app": "env-cmd -e envs node __tests__/app.js"
   },
-  "main": "index.js",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "boilerplate": "generator-typescript",
+  "homepage": "https://js.work",
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/node": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
-    "babel-plugin-module-resolver": "^4.1.0",
-    "prettier": "^2.5.1"
+    "env-cmd": "^10.1.0",
+    "esbuild": "^0.14.38",
+    "esbuild-node-externals": "^1.4.1",
+    "esbuild-plugin-clean": "^0.9.0",
+    "esbuild-plugin-replace": "^1.2.0",
+    "prettier": "^2.6.2",
+    "release-it": "^15.0.0",
+    "typescript": "^4.6.4"
   },
   "dependencies": {
-    "@jswork/next": "^1.0.4",
-    "@jswork/next-fetch": "^1.1.2",
-    "@jswork/next-global": "^1.0.0",
-    "@jswork/next-require": "^1.0.3",
-    "@jswork/next-yaml-configuration": "^1.0.1",
-    "node-fetch": "^2.6.1",
-    "yargs-parser": "^20.2.7"
-  },
-  "boilerplate": "boilerplate-nodejs",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/afeiship/boilerplate-nodejs.git"
+    "@jswork/next": "^1.0.9"
   }
 }

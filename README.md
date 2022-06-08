@@ -1,8 +1,23 @@
-# boilerplate-nodejs
-> boilerplate-nodejs-description
+# env-select
+> Dynamic detect env by url or other window environment.
 
+## installation
+```shell
+npm i @jswork/env-select
+```
+
+## usage
 ```js
-// hello babel-node! 👉 2.5.0
-// npm-scripts: babel-node src/app.js --name=nodejsapp
-{ name: 'hello', version: '1.0.0' } { _: [], name: 'nodejsapp' }
+// .env-cmdrc.js
+const { envs } = require('./src/envs');
+
+module.exports = envs.set({
+  beta: {
+    base_url: 'https://site-predict-platform.beta.saybot.net',
+  },
+  staging: {
+    base_url: 'https://site-predict-platform.staging.saybot.net',
+  },
+});
+
 ```
