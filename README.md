@@ -45,7 +45,7 @@ const base_url = Env.get('base_url');
 ```
 
 > npm package scripts
-```json
+```json5
 {
   // ...
   "start": "env-cmd -e envs react-scripts start",
