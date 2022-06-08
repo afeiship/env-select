@@ -1,4 +1,4 @@
-import envs from './envs';
+import CraEnvs from './cra-envs';
 import AbstractEnvSelect from './abstract-env-select';
 
-export { envs, AbstractEnvSelect };
+export { CraEnvs, AbstractEnvSelect };

@@ -1,6 +1,6 @@
-const env = require('./src/envs');
+const { CraEnvs } = require('./dist/index.cjs');
 
-module.exports = env.set({
+module.exports = CraEnvs.set({
   beta: {
     base_url: 'https://site-predict-platform.beta.saybot.net',
   },

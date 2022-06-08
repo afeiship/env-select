@@ -1,3 +1,3 @@
-const envs = require('../src/envs');
+const { CraEnvs } = require('../dist/index.cjs');
 
-console.log(envs.get());
+console.log(CraEnvs.get());

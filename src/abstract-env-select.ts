@@ -1,8 +1,8 @@
 import nx from '@jswork/next';
-import envs from './envs';
+import CraEnvs from './cra-envs';
 
 export default class AbstractEnvSelect {
-  static ENVS = envs.get();
+  static ENVS = CraEnvs.get();
   /**
    * Auto select env by current url.
    * @returns {string} The target env string.
