@@ -6,11 +6,11 @@
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
   "scripts": {
+    "start": "env-cmd -e envs node __tests__/app.js",
     "postbuild": "tsc --emitDeclarationOnly",
     "build": "node esbuild.config.js",
     "test": "env-cmd -e envs jest",
-    "release": "release-it",
-    "test:app": "env-cmd -e envs node __tests__/app.js"
+    "release": "release-it"
   },
   "license": "MIT",
   "publishConfig": {
