@@ -25,7 +25,12 @@ module.exports = CraEnvs.set({
 // Your app implementation
 import { AbstractEnvSelect } from '@jswork/env-select';
 
-class Env extends AbstractEnvSelect{
+class Env extends AbstractEnvSelect {
+  static ENV_SELECTORS = {
+    beta: 'course-assets.saybot.net',
+    staging: 'course-assets.alo7.com',
+  };
+
   /**
    * Auto select env by current url.
    * @returns {Environment} The target env string.
