@@ -9,7 +9,7 @@ npm i @jswork/env-select
 ## usage
 > basic partial files
 ```js
-// .env-cmdrc.js
+// 1. .env-cmdrc.js
 const { CraEnvs } = require('@jswork/env-select');
 
 module.exports = CraEnvs.set({
@@ -22,7 +22,7 @@ module.exports = CraEnvs.set({
 });
 
 
-// Your app implementation
+//3. Write your app implementation
 import { AbstractEnvSelect } from '@jswork/env-select';
 
 class Env extends AbstractEnvSelect {
@@ -47,12 +47,12 @@ class Env extends AbstractEnvSelect {
   }
 }
 
-// Usage <when beta/staging>
+// 3. Use you customize env <when beta/staging>
 const base_url = Env.get('base_url');
 // https://site-predict-platform.beta.saybot.net
 ```
 
-> npm package scripts
+> 4. update npm package scripts
 ```json5
 {
   // ...
