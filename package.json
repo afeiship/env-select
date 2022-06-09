@@ -1,6 +1,6 @@
 {
   "name": "@jswork/env-select",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Dynamic detect env by url or other window environment.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -20,8 +20,9 @@
   "boilerplate": "generator-typescript",
   "homepage": "https://js.work",
   "devDependencies": {
-    "@jswork/banner-defaults": "^1.0.2",
+    "@jswork/banner-defaults": "^1.0.3",
     "@jswork/next-nice-comments": "^1.0.3",
+    "dateformat": "^3.0.3",
     "env-cmd": "^10.1.0",
     "esbuild": "^0.14.38",
     "esbuild-node-externals": "^1.4.1",
