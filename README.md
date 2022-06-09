@@ -57,6 +57,7 @@ const base_url = Env.get('base_url');
 {
   // ...
   "start": "env-cmd -e envs react-scripts start",
+  "build": "env-cmd -e envs react-scripts build",
   // ...
 }
 ```
