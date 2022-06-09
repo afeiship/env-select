@@ -1,4 +1,12 @@
 const { CraEnvs, AbstractEnvSelect } = require('../dist/index.cjs');
+const nx = require('@jswork/next');
+
+// mock cra_app_ for process.env
+nx.forIn(process.env, (key, value) => {
+  if (key.startsWith('__envs__')) {
+    process.env['REACT_APP_' + key] = value;
+  }
+});
 
 describe('test cra-envs', () => {
   test('cra-envs: get all', function () {

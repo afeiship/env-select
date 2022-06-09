@@ -6,7 +6,7 @@ const ENVS_KEY = '__envs__';
 export default class CraEnvs {
   static version = '__VERSION__';
   static get() {
-    const penv = CraAppEnvs.get('envs');
+    const penv = CraAppEnvs.get();
     const tenv = {};
     nx.forIn(penv, (key, value) => {
       if (key.includes(ENVS_KEY)) {
