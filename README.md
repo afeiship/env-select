@@ -9,7 +9,7 @@ npm i @jswork/env-select
 ## usage
 > basic partial files
 ```js
-// 1. .env-cmdrc.js
+// 1. `.env-cmdrc.js`
 const { CraEnvs } = require('@jswork/env-select');
 
 module.exports = CraEnvs.set({
@@ -22,7 +22,7 @@ module.exports = CraEnvs.set({
 });
 
 
-//3. Write your app implementation
+// 2. Write your app implementation
 import { AbstractEnvSelect } from '@jswork/env-select';
 
 class Env extends AbstractEnvSelect {
