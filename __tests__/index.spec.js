@@ -8,6 +8,8 @@ nx.forIn(process.env, (key, value) => {
   }
 });
 
+// console.log(process.env);
+
 describe('test cra-envs', () => {
   test('cra-envs: get all', function () {
     const res = CraEnvs.get();
