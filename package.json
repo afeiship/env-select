@@ -1,6 +1,6 @@
 {
   "name": "@jswork/env-select",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Dynamic detect env by url or other window environment.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
