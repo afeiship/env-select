@@ -13,10 +13,18 @@ describe('api.basic', () => {
     expect(replaceModule(path4)).toBe('sub.auth');
   });
 
-  test('utils: replaceModule test.ctrl.ts/test_ctrl.ts', ()=>{
+  test('utils: replaceModule test.ctrl.ts/test_ctrl.ts', () => {
     const path1 = './src/shared/modules/test.ctrl.ts';
     const path2 = './sub/auth_ctrl.ts';
     expect(replaceModule(path1)).toBe('testCtrl');
     expect(replaceModule(path2)).toBe('sub.authCtrl');
-  })
+  });
+
+  test('utils: with default modules folder', () => {
+    const path1 = './src/shared/services/test/ap1.ts';
+    const path2 = './src/shared/helpers/mod1/util1.ts';
+
+    expect(replaceModule(path1, 'services/')).toBe('test.ap1');
+    expect(replaceModule(path2, 'helpers/')).toBe('mod1.util1');
+  });
 });

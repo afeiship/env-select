@@ -13,11 +13,11 @@ const camelize = (inStr: string) => {
   return [...parts, camelcaseName].join('.');
 };
 
-export const replaceModule = (inputPath: string) => {
+export const replaceModule = (inputPath: string, inModules = 'modules/') => {
   const end = inputPath.split('.').pop();
-  const start = inputPath.includes('modules') ? 'modules/' : './';
+  const start = inputPath.includes(inModules) ? inModules : './';
   const regex = new RegExp(`${start}(.*?).${end}`);
   const match = inputPath.match(regex);
   const matched = match && match[1];
-  return matched ? camelize(match[1]) : inputPath;
+  return matched ? camelize(matched) : inputPath;
 };
