@@ -22,6 +22,13 @@ const stores = scanVite(moduleFiles, { modules: '/stores/' });
 // when webpack
 const context = require.context('./shared/stores/modules', true, /\.ts$/);
 const stores = scanWebpack(context, { modules: '/modules/' });
+
+// result
+const reuslt = {
+  "user": 'any',
+  "sub.child1": 'any',
+  "sub.authCtrl": 'any',
+};
 ```
 
 ## license
