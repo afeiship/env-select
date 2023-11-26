@@ -7,10 +7,10 @@ interface Options {
 
 const defaults: Options = {
   keyFn: (key: string) => replaceModule(key),
-  valueFn: (key: any, context: any) => context(key)?.default,
+  valueFn: (key: any, context: any) => context(key)?.default || context(key),
 };
 
-const scanWebpack = (inContext: any, inOptions?: Options): Record<string, any> => {
+const scan = (inContext: any, inOptions?: Options): Record<string, any> => {
   const options = { ...defaults, ...inOptions };
   return inContext.keys().reduce((acc: any, key: string) => {
     acc[options.keyFn!(key)] = options.valueFn!(key, inContext);
@@ -18,4 +18,4 @@ const scanWebpack = (inContext: any, inOptions?: Options): Record<string, any> =
   }, {});
 };
 
-export default scanWebpack;
+export default scan;
