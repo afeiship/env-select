@@ -1,6 +1,6 @@
 {
   "name": "@jswork/scan-modules",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get module objects use vite or webpack.",
   "scripts": {
     "build": "tsup",
@@ -29,5 +29,11 @@
     "registry": "https://registry.npmjs.org"
   },
   "homepage": "https://js.work",
-  "dependencies": {}
+  "dependencies": {},
+  "keywords": [
+    "module",
+    "modules",
+    "vite",
+    "webpack"
+  ]
 }
