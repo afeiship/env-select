@@ -24,11 +24,6 @@ const context = require.context('./shared/stores/modules', true, /\.ts$/);
 const stores = scanWebpack(context, { modules: '/modules/' });
 ```
 
-## types
-```ts
-/// <reference types="@jswork/scan-modules/global.d.ts" />
-```
-
 ## license
 Code released under [the MIT license](https://github.com/afeiship/scan-modules/blob/master/LICENSE.txt).
 
