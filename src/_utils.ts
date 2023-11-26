@@ -3,12 +3,10 @@
 // './src/stores/modules/sub/test-sbc.ts'         ---> sub/test-sbc
 // ./modules/sub/test.ts                          ---> sub/test
 
-// replace sub/test/child-test ---> subTestChild
-// replace sub/test/abc        ---> subTestAbc
+// replace sub/test/child-test ---> sub.testChild
+// replace sub/test/abc        ---> sub.test.abc
 
-const camelize = (inStr: string) => inStr
-  .replace(/\/(\w)/g, (_, c) => c.toUpperCase())
-  .replace(/-(\w)/g, (_, c) => (c ? c.toUpperCase() : ''));
+const camelize = (inStr: string) => inStr.replace(/\//g, '.').replace(/-(\w)/g, (_, c) => (c ? c.toUpperCase() : ''));
 
 export const replaceModule = (inputPath: string) => {
   const end = inputPath.split('.').pop();

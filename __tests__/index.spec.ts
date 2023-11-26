@@ -7,9 +7,9 @@ describe('api.basic', () => {
     const path3 = './modules/sub/test.ts';
     const path4 = './sub/auth.ts';
 
-    expect(replaceModule(path1)).toBe('subTestSbc');
-    expect(replaceModule(path2)).toBe('subTestSbc');
-    expect(replaceModule(path3)).toBe('subTest');
-    expect(replaceModule(path4)).toBe('subAuth');
+    expect(replaceModule(path1)).toBe('sub.testSbc');
+    expect(replaceModule(path2)).toBe('sub.testSbc');
+    expect(replaceModule(path3)).toBe('sub.test');
+    expect(replaceModule(path4)).toBe('sub.auth');
   });
 });
