@@ -6,7 +6,12 @@
 // replace sub/test/child-test ---> sub.testChild
 // replace sub/test/abc        ---> sub.test.abc
 
-const camelize = (inStr: string) => inStr.replace(/\//g, '.').replace(/-(\w)/g, (_, c) => (c ? c.toUpperCase() : ''));
+const camelize = (inStr: string) => {
+  const parts = inStr.split('/');
+  const filename = parts.pop();
+  const camelcaseName = filename?.replace(/[._-]/g, '_').replace(/_(\w)/g, (_, c) => (c ? c.toUpperCase() : ''));
+  return [...parts, camelcaseName].join('.');
+};
 
 export const replaceModule = (inputPath: string) => {
   const end = inputPath.split('.').pop();

@@ -12,4 +12,11 @@ describe('api.basic', () => {
     expect(replaceModule(path3)).toBe('sub.test');
     expect(replaceModule(path4)).toBe('sub.auth');
   });
+
+  test('utils: replaceModule test.ctrl.ts/test_ctrl.ts', ()=>{
+    const path1 = './src/shared/modules/test.ctrl.ts';
+    const path2 = './sub/auth_ctrl.ts';
+    expect(replaceModule(path1)).toBe('testCtrl');
+    expect(replaceModule(path2)).toBe('sub.authCtrl');
+  })
 });
