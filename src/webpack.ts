@@ -6,7 +6,7 @@ interface Options {
 }
 
 const defaults: Options = {
-  keyFn: (key: string) => replaceModule(key, 'modules/'),
+  keyFn: (key: string) => replaceModule(key),
   valueFn: (key: any, context: any) => context(key).default,
 };
 

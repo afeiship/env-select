@@ -5,9 +5,11 @@ describe('api.basic', () => {
     const path1 = './src/shared/stores/modules/sub/test-sbc.ts';
     const path2 = './src/stores/modules/sub/test-sbc.ts';
     const path3 = './modules/sub/test.ts';
+    const path4 = './sub/auth.ts';
 
-    expect(replaceModule(path1, 'modules/')).toBe('sub/test-sbc');
-    expect(replaceModule(path2, 'modules/')).toBe('sub/test-sbc');
-    expect(replaceModule(path3, 'modules/')).toBe('sub/test');
+    expect(replaceModule(path1)).toBe('sub/test-sbc');
+    expect(replaceModule(path2)).toBe('sub/test-sbc');
+    expect(replaceModule(path3)).toBe('sub/test');
+    expect(replaceModule(path4)).toBe('sub/auth');
   });
 });
