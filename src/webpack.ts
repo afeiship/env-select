@@ -7,7 +7,7 @@ interface Options {
 
 const defaults: Options = {
   keyFn: (key: string) => replaceModule(key),
-  valueFn: (key: any, context: any) => context(key).default,
+  valueFn: (key: any, context: any) => context(key)?.default,
 };
 
 const scanWebpack = (inContext: any, inOptions?: Options): Record<string, any> => {
