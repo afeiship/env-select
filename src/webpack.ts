@@ -10,7 +10,7 @@ const defaults: Options = {
   valueFn: (value: any, context: any) => context(value).default,
 };
 
-const webpackScan = (inContext: any, inOptions?: Options): Record<string, any> => {
+const scanWebpack = (inContext: any, inOptions?: Options): Record<string, any> => {
   const options = { ...defaults, ...inOptions };
   return inContext.keys().reduce((acc: any, key: string) => {
     acc[options.keyFn!(key)] = options.valueFn!(inContext(key), inContext);
@@ -18,4 +18,4 @@ const webpackScan = (inContext: any, inOptions?: Options): Record<string, any> =
   }, {});
 };
 
-export default webpackScan;
+export default scanWebpack;
