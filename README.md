@@ -1,66 +1,39 @@
-# env-select
-> Dynamic detect env by url or other window environment.
+# scan-modules
+> Get module objects use vite or webpack.
+
+[![version][version-image]][version-url]
+[![license][license-image]][license-url]
+[![size][size-image]][size-url]
+[![download][download-image]][download-url]
 
 ## installation
 ```shell
-npm i @jswork/env-select
+npm install @jswork/scan-modules
 ```
 
 ## usage
-> basic partial files
 ```js
-// 1. `.env-cmdrc.js`
-const { CraEnvs } = require('@jswork/env-select');
+import scanModules from '@jswork/scan-modules';
 
-module.exports = CraEnvs.set({
-  beta: {
-    base_url: 'https://site-predict-platform.beta.saybot.net',
-  },
-  staging: {
-    base_url: 'https://site-predict-platform.staging.saybot.net',
-  },
-});
-
-
-// 2. Write your app implementation
-import { AbstractEnvSelect } from '@jswork/env-select';
-
-class Env extends AbstractEnvSelect {
-  static ENV_SELECTORS = {
-    beta: 'course-assets.saybot.net',
-    staging: 'course-assets.alo7.com',
-  };
-
-  /**
-   * Auto select env by current url.
-   * @returns {string} The target env string.
-   */
-  static select(): string {
-    let env = 'beta';
-    nx.forIn(this.ENV_SELECTORS, (key, value) => {
-      if (window.location.pathname.includes(value)) {
-        env = key;
-        return nx.BREAKER;
-      }
-    });
-    return env;
-  }
-}
-
-// 3. Use you customize env <when beta/staging>
-const base_url = Env.get('base_url');
-// https://site-predict-platform.beta.saybot.net
+// usage goes here.
 ```
 
-> 4. update npm package scripts
-```json5
-{
-  // ...
-  "start": "env-cmd -e envs react-scripts start",
-  "build": "env-cmd -e envs react-scripts build",
-  // ...
-}
+## types
+```ts
+/// <reference types="@jswork/scan-modules/global.d.ts" />
 ```
 
-## resources
-- https://js.work/works/61077d5843ff0
+## license
+Code released under [the MIT license](https://github.com/afeiship/scan-modules/blob/master/LICENSE.txt).
+
+[version-image]: https://img.shields.io/npm/v/@jswork/scan-modules
+[version-url]: https://npmjs.org/package/@jswork/scan-modules
+
+[license-image]: https://img.shields.io/npm/l/@jswork/scan-modules
+[license-url]: https://github.com/afeiship/scan-modules/blob/master/LICENSE.txt
+
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/scan-modules
+[size-url]: https://github.com/afeiship/scan-modules/blob/master/dist/index.min.js
+
+[download-image]: https://img.shields.io/npm/dm/@jswork/scan-modules
+[download-url]: https://www.npmjs.com/package/@jswork/scan-modules

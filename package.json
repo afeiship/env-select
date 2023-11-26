@@ -1,46 +1,30 @@
 {
-  "name": "@jswork/env-select",
-  "version": "1.0.5",
-  "description": "Dynamic detect env by url or other window environment.",
+  "name": "@jswork/scan-modules",
+  "version": "1.0.0",
+  "description": "Get module objects use vite or webpack.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "start": "env-cmd -e envs node __tests__/app.js",
-    "postbuild": "tsc --emitDeclarationOnly",
-    "build": "node esbuild.config.js",
-    "test": "env-cmd -e envs jest",
+    "build": "tsup",
+    "test": "jest",
     "release": "release-it"
   },
   "license": "MIT",
+  "devDependencies": {
+    "@swc/core": "^1.3.93",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.5",
+    "@types/webpack-env": "^1.18.4",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.0.0-next.1",
+    "tsup": "^7.2.0",
+    "typescript": "^4.9.5"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
-  "boilerplate": "generator-typescript",
   "homepage": "https://js.work",
-  "devDependencies": {
-    "@jswork/banner-defaults": "^1.0.3",
-    "@jswork/next-nice-comments": "^1.0.3",
-    "dateformat": "^3.0.3",
-    "env-cmd": "^10.1.0",
-    "esbuild": "^0.14.38",
-    "esbuild-node-externals": "^1.4.1",
-    "esbuild-plugin-clean": "^0.9.0",
-    "esbuild-plugin-replace": "^1.2.0",
-    "jest": "^28.1.1",
-    "prettier": "^2.6.2",
-    "release-it": "^15.0.0",
-    "typescript": "^4.6.4"
-  },
-  "dependencies": {
-    "@jswork/cra-envs": "^1.0.13",
-    "@jswork/next": "^1.0.9"
-  },
-  "keywords": [
-    "env",
-    "environment",
-    "select",
-    "selector"
-  ]
+  "dependencies": {}
 }
