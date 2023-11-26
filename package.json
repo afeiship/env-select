@@ -1,6 +1,6 @@
 {
   "name": "@jswork/scan-modules",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Get module objects use vite or webpack.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
