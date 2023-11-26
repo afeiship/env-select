@@ -13,9 +13,15 @@ npm install @jswork/scan-modules
 
 ## usage
 ```js
-import scanModules from '@jswork/scan-modules';
+import { scanVite, scanWebpack } from '@jswork/scan-modules';
 
-// usage goes here.
+// when vite
+const moduleFiles = import.meta.glob('./shared/stores/**/*.ts', { eager: true });
+const stores = scanVite(moduleFiles, { modules: '/stores/' });
+
+// when webpack
+const context = require.context('./shared/stores/modules', true, /\.ts$/);
+const stores = scanWebpack(context, { modules: '/modules/' });
 ```
 
 ## types
