@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES5",
     "strict": true,
     "skipLibCheck": true,
     "sourceMap": true,
@@ -12,9 +12,5 @@
     "moduleResolution": "node",
     "noImplicitAny": false
   },
-  "include": [
-    "node_modules/@types",
-    "src",
-    "global.d.ts"
-  ]
+  "include": ["node_modules/@types", "src", "global.d.ts"]
 }

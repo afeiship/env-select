@@ -5,10 +5,10 @@ export default defineConfig({
   format: ['cjs', 'esm' /*'iife' */],
   splitting: true,
   cjsInterop: true,
-  target: 'es5',
   // globalName: 'i18nHelper',
   // external: ['react'],
   dts: true,
+  clean: true,
   sourcemap: true,
   outExtension({ format }) {
     return {
