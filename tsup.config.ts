@@ -5,6 +5,7 @@ export default defineConfig({
   format: ['cjs', 'esm' /*'iife' */],
   splitting: true,
   cjsInterop: true,
+  target: 'es5',
   // globalName: 'i18nHelper',
   // external: ['react'],
   dts: true,
@@ -13,5 +14,5 @@ export default defineConfig({
     return {
       js: `.${format}.js`,
     };
-  }
+  },
 });
