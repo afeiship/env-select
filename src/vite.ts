@@ -10,7 +10,7 @@ interface Options {
 
 const defaults: Options = {
   modules: 'modules/',
-  valueFn: (key: any, context: any) => context?.default || context,
+  valueFn: (_: any, context: any) => context?.default || context,
 };
 
 
