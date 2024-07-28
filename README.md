@@ -26,10 +26,8 @@ const stores = scanWebpack(context, { modules: '/modules/' });
 // result
 const reuslt = {
   "user": 'any',
-  "sub":{
-    "child2": 'any',
-    "authCtrl": 'any'
-  }
+  "subChild2": 'any',
+  "subCtrl": 'any',
 };
 ```
 
