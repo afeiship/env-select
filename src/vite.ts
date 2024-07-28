@@ -1,4 +1,5 @@
 import { replaceModule } from './_utils';
+import path2mod from '@jswork/path2modname';
 
 type ModuleFiles = Record<string, any>;
 
@@ -11,7 +12,7 @@ interface Options {
 const defaults: Options = {
   modules: 'modules/',
   valueFn: (_: any, context: any) => context?.default || context,
-  keyFn: (key: string) => key,
+  keyFn: (key: string) => path2mod(key),
 };
 
 const scan = (inModuleFiles: ModuleFiles, inOptions?: Options): Record<string, any> => {

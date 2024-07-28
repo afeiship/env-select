@@ -42,5 +42,8 @@
     "modules",
     "vite",
     "webpack"
-  ]
+  ],
+  "dependencies": {
+    "@jswork/path2modname": "^1.0.1"
+  }
 }
