@@ -1,4 +1,5 @@
 import { replaceModule } from './_utils';
+import objectPath from 'object-path';
 
 interface Options {
   modules?: string;
@@ -17,7 +18,7 @@ const scan = (inContext: any, inOptions?: Options): Record<string, any> => {
     return replaceModule(key, options.modules);
   };
   return inContext.keys().reduce((acc: any, key: string) => {
-    acc[options.keyFn!(key)] = options.valueFn!(key, inContext);
+    objectPath.set(acc, options.keyFn!(key), options.valueFn!(key, inContext));
     return acc;
   }, {});
 };
