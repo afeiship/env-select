@@ -1,4 +1,5 @@
 import { replaceModule } from './_utils';
+import objectPath from 'object-path';
 
 type ModuleFiles = Record<string, any>;
 
@@ -13,7 +14,6 @@ const defaults: Options = {
   valueFn: (_: any, context: any) => context?.default || context,
 };
 
-
 const scan = (inModuleFiles: ModuleFiles, inOptions?: Options): Record<string, any> => {
   const options = { ...defaults, ...inOptions };
   options.keyFn = options.keyFn || function(key: string) {
@@ -23,7 +23,7 @@ const scan = (inModuleFiles: ModuleFiles, inOptions?: Options): Record<string, a
   const keys = Object.keys(inModuleFiles);
   return keys.reduce((acc: any, key: string) => {
     const value = inModuleFiles[key];
-    acc[options.keyFn!(key)] = options.valueFn!(key, value);
+    objectPath.set(acc, options.keyFn!(key), options.valueFn!(key, value));
     return acc;
   }, {});
 };
