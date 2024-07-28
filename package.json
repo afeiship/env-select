@@ -37,9 +37,6 @@
     "registry": "https://registry.npmjs.org"
   },
   "homepage": "https://js.work",
-  "dependencies": {
-    "object-path": "^0.11.8"
-  },
   "keywords": [
     "module",
     "modules",

@@ -1,5 +1,4 @@
 import { replaceModule } from './_utils';
-import objectPath from 'object-path';
 
 type ModuleFiles = Record<string, any>;
 
@@ -23,7 +22,7 @@ const scan = (inModuleFiles: ModuleFiles, inOptions?: Options): Record<string, a
   const keys = Object.keys(inModuleFiles);
   return keys.reduce((acc: any, key: string) => {
     const value = inModuleFiles[key];
-    objectPath.set(acc, options.keyFn!(key), options.valueFn!(key, value));
+    acc[options.keyFn!(key)] = options.valueFn!(key, value);
     return acc;
   }, {});
 };
